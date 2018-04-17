@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type="text/javascript" src="/QuestionBankSystem/src/main/webapp/public/js/jquery.js"></script>
+<!-- <script type="text/javascript" src="/QuestionBankSystem/asset/js/jquery.js"></script> -->
 <title>Loading Page</title>
 </head>
 <body>
