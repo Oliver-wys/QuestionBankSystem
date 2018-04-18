@@ -1,0 +1,118 @@
+@CHARSET "UTF-8";
+*{
+	margin: 0px;
+	padding: 0px
+}
+*{
+    margin:0px;
+    padding:0px
+}
+div{
+    display: block;
+}
+
+#container{
+    background-color: #2aabd2;
+    width: 1349px;
+    height: 699px;
+
+}
+#head{
+    background-color: blue;
+    height: 80px;
+}
+#head-img{
+    margin: 0px 0px;
+    width: 220px;
+    height: 80px;
+    background: #F5F5F5 url("../img/head1.jpg") 40px -14px no-repeat;
+    background-size: 150px 110px;
+    float: left;
+    border-bottom: 1px solid #337AB7;
+    box-shadow:0px 0px 3px 3px aliceblue;
+}
+
+#head-text{
+    margin: 0px 0px;
+    width: 1129px;
+    height: 80px;
+    background-color: #F5F5F5;
+    /*background-color: blue;*/
+    float: right;
+    letter-spacing: 15px;
+    font-family: "LiSu";
+    font-size: 50px;
+    border-bottom: 1px solid #337AB7;
+    box-shadow:0px 0px 3px 3px aliceblue;
+}
+
+
+#center{
+    background-color: white;
+    width: 1349px;
+    height: 579px;
+    float: right;
+    right: 0px;
+
+}
+
+#center-box{
+    background-color: white;
+    margin: 80px 0px 0px 210px;
+    width: 980px;
+    height: 416px;
+
+}
+#box-left{
+    background-color: white;
+    height: 400px;
+    width: 590px;
+    position: relative;
+    top: 8px;
+    left: 8px;
+    background:white url("../img/city.png");
+    background-size: 520px 400px;
+}
+#box-right{
+    background-color: white;
+    width: 334px;
+    height: 374px;
+    position: relative;
+    float: right;
+    bottom: 379px;
+    right: 21px;
+    border: 1px solid #337AB7;
+    box-shadow:0px 0px 3px 3px aliceblue;
+    border-radius: 5px;
+}
+#formbox{
+    width: 260px;
+    height: 350px;
+    margin: 70px auto 0px auto;
+}
+/*#loading-text {*/
+    /*width: 260px;*/
+    /*height: 40px;*/
+    /*margin: 40px auto 0px auto;*/
+    /*font-size: 25px;*/
+    /*letter-spacing: 6px;*/
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    /*border-radius: 5px;*/
+/*}*/
+
+.btn-change{
+    width: 260px;
+    left:20px;
+    float: right;
+    letter-spacing: 15px;
+
+}
+#bottom{
+    background-color: #F5F5F5;
+    height: 40px;
+    width: 100%;
+    float: right;
+    padding: 0px auto;
+    border-top: 1px solid #337AB7;
+    box-shadow:0px 0px 3px 3px aliceblue;
+}
