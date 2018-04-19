@@ -27,22 +27,21 @@
 				<div id="box-right">
 					<!--<div id="loading-text" >请登录</div>-->
 					<div id="formbox">
-						<form>
+						<form onsubmit="return false;">
 							<div class="form-group">
 								<label for="account">账号</label> <input type="text"
 									class="form-control" id="account" placeholder="账号">
 							</div>
 							<div class="form-group">
-								<label for="password">密码</label> <input
-									type="password" class="form-control" id="password"
-									placeholder="密码">
+								<label for="password">密码</label> <input type="password"
+									class="form-control" id="password" placeholder="密码">
 							</div>
 
 							<div class="checkbox">
 								<label> <input type="checkbox"> 记住我
 								</label>
 							</div>
-							<button type="submit" class="btn btn-primary btn-change ">登陆</button>
+							<button id="submit" class="btn btn-primary btn-change ">登陆</button>
 						</form>
 					</div>
 
