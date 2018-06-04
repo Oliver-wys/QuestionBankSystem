@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+.container{
+	border-left: 2px solid;
+	border-right: 2px solid;
+}
+
+h1{
+	margin: 70px auto;
+	text-align: center;
+}
+
+.inf-box{
+}
+
+label{
+	margin: 0px 130px;
+	font-size: 18px;
+	text-align: center;
+}
+.question{
+	margin: 50px 150px;
+}
+
+.singlebox{
+	margin: 30px 50px;
+}
+.multibox{
+	margin: 30px 50px;
+}
+.option{
+	margin: 10px 20px;
+}
+.judgebox{
+	margin: 30px 50px;
+}
+.questionright{
+	width: 30%;
+	float: right;
+	bottom: 28px;
+	position: relative;
+}
+#savebutton{
+	margin: 0px auto;
+}
+.questionleft{
+	width: 70%;	
+}
+.completionbox{
+	margin: 30px 50px;
+}
+.shortbox{
+	margin: 30px 50px;
+}
+.answerplace{
+	margin: 200px auto;
+}

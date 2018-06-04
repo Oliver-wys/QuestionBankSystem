@@ -1,0 +1,277 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+}
+
+div {
+	display: block;
+}
+
+#container {
+	background-color: gold;
+	width: 1364px;
+	height: 699px;
+}
+
+#head {
+	background-color: #769FCD;
+	height: 80px;
+	width: 100%;
+	float: right;
+	position: relative;
+}
+
+#head-img {
+	width: 180px;
+	height: 80px;
+	background: #769FCD url("../img/square.png") 10px -32px no-repeat;
+	background-size: 150px 150px;
+	float: left;
+	margin: 0px 0px 0px 80px;
+}
+
+#head-text {
+	margin: 0px 0px;
+	width: 1104px;
+	height: 80px;
+	background-color: #769FCD;
+	float: right;
+	font-family: "LiSu";
+	font-size: 33px;
+	color: white;
+	line-height: 80px;
+	user-select: none;
+}
+
+#center {
+	background-color: white;
+	width: 1364px;
+	height: 579px;
+	float: right;
+}
+
+#box-left {
+	background-color: #4D7CAE;
+	height: 579px;
+	width: 240px;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+
+#user-box {
+	width: 240px;
+	height: 120px;
+	float: left;
+}
+
+#user-img {
+	width: 80px;
+	height: 80px;
+	float: left;
+	background: url("../img/userimg1.png") no-repeat;
+	background-size: 80px 80px;
+	margin: 20px 0px 0px 15px;
+}
+
+#user-info {
+	width: 145px;
+	height: 80px;
+	margin: 20px auto;
+	float: left;
+}
+
+#user-info p {
+	color: white;
+	margin: 18px 0px 0px 10px;
+	font-size: 16px;
+	font-weight: bold;
+	user-select: none;
+}
+
+#user-info .user-action {
+	float: left;
+	margin: 5px 5px 0px 5px;
+	user-select: none;
+}
+
+#user-info a {
+	background-color: #005792;
+}
+
+#user-info a:hover {
+	background-color: #00BBF0;
+}
+
+#menu-box {
+	height: 460px;
+	width: 257px;
+	float: left;
+	position: absolute;
+	margin: 120px 0px 0px 0px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#menu-box .row {
+	margin: 0px 0px 0px 0px;
+	height: 45px;
+	width: 240px;
+}
+
+#menu-box .row :hover {
+	background-color: #005792;
+	color: white;
+}
+
+#menu-box .choosen {
+	background-color: #005792;
+	color: white;
+}
+
+#menu-box .row p {
+	margin: 0px auto;
+	line-height: 45px;
+	width: 240px;
+	text-align: center;
+	color: white;
+	font-size: 17px;
+	user-select: none;
+}
+
+#menu-box .second-row {
+	margin: 0px 0px 0px 10px;
+	height: 35px;
+	width: 220px;
+}
+
+#menu-box .second-row:hover {
+	background-color: #00BBF0;
+	color: white;
+}
+
+#menu-box .secondchoosen {
+	background-color: #00BBF0;
+	color: white;
+}
+
+.second-row p {
+	margin: 0px auto;
+	line-height: 35px;
+	width: 220px;
+	text-align: center;
+	color: white;
+	font-size: 15px;
+	user-select: none;
+}
+
+#box-right {
+	background-color: #ECFAFB;
+	width: 1124px;
+	height: 579px;
+	float: right;
+	overflow: hidden;
+}
+
+
+
+.des-box {
+	background-color: white;
+	width: 1080px;
+	height: 536px;
+	float: left;
+	margin: 22px 22px 0px 22px;
+	border: 1px solid whitesmoke;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.select-group{
+	margin: 20px 0px 10px 20px;
+	font-size: 17px;
+}
+
+.des-inf {
+	margin: 20px 0px 0px 22px;
+}
+
+.table-box {
+	width: 1050px;
+	margin: auto auto;
+}
+
+.table-box table{
+	table-layout: fixed;
+}
+
+.table-box table td{
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+
+.userinf-box{
+	width: 1000px;
+	/* height: 400px; */
+	margin: 40px auto;
+	border-radius: 5px;
+	background-color: #ECFEFF;
+}
+#inf-change{
+	float: right;
+}
+
+.userinf-box .button-box{
+	background-color: #ECFEFF;
+}
+.userinf-box .button-box button{
+	position: relative;
+	
+	left: 550px;
+	margin: 0px 10px 0px 0px;
+}
+.paper-box{
+	width: 1000px;
+	margin: auto auto;
+	border-radius: 5px;
+/* 	background-color: #ECFEFF; */
+}
+
+.input-group{
+	margin: 15px 0px 10px 0px;
+}
+.paper-box .input-group{
+	top : 8px;
+	margin: 12px 0px 0px 0px;
+}
+
+.paper-box span{
+	background-color: #337AB7;
+	color: white;
+}
+.paper-box button{
+	float: right;
+	margin: 8px 0px 0px 0px;
+}
+.paper-box .form-row{
+	margin-right: -15px;
+    margin-left: -15px;
+}
+
+.checkboxgroup{
+	position: relative;
+	top: 10px;
+}
+.checkbox-box label{
+	margin: 0px 10px 0px 0px;
+}
+
+#bottom {
+	background-color: #769FCD;
+	height: 41px;
+	width: 1364px;
+	float: right;
+	padding: 0px auto;
+}
+

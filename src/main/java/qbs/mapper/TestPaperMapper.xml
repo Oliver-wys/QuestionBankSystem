@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="qbs.mapper.TestPaperMapper">
+
+	<select id="findAll" resultType="TestPaper">
+		SELECT * FROM TESTPAPER_TAB
+	</select>
+	
+	<select id="findByTestInf" resultType="TestPaper">
+		SELECT * FROM TESTPAPER_TAB WHERE TESTINFID = #{id}
+	</select>
+	
+	<insert id="addTestPaper" parameterType="TestPaper">
+
+		<!-- 获取序列 -->
+		<selectKey keyProperty="id" resultType="java.lang.Long"
+			order="BEFORE">
+			select testpaper_seq.nextval from dual
+		</selectKey>
+
+																
+		insert into testpaper_tab(ID,SINGLEID,MULTIID,JUDGEID,COMPLETIONID,SHORTID,TESTINFID)
+		<!-- 获取上面的字段 -->
+		values(#{id,jdbcType=INTEGER},#{singleId,jdbcType=VARCHAR},#{multiId,jdbcType=VARCHAR},#{judgeId,jdbcType=VARCHAR},#{completionId,jdbcType=VARCHAR},#{shortId,jdbcType=VARCHAR},#{testInfId,jdbcType=VARCHAR})
+	</insert>
+	
+	<delete id="delTestPaper">
+		delete from testpaper_tab where id = #{id}
+	</delete>
+	
+	<delete id="delTestPapers" parameterType="Long">
+		delete from testpaper_tab where testinfid in 
+		 <foreach item="id" collection="list" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+	</delete>
+
+
+
+</mapper>

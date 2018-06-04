@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qbs.mapper.ChapterMapper">
+
+	<select id="findAll" resultType="Chapter">
+		SELECT * FROM CHAPTER_TAB
+	</select>
+
+	<select id="findBySubject" resultType="Chapter">
+		SELECT * FROM CHAPTER_TAB WHERE SUBJECTNAME = #{subjectName} ORDER BY NAME
+	</select>
+	
+	
+	<insert id="addChapter" parameterType="Chapter">
+	
+		<!-- 获取序列 -->
+		<selectKey keyProperty="id" resultType="java.lang.Long" order="BEFORE">
+			select chapter_seq.nextval from dual
+		</selectKey>
+		
+		insert into chapter_tab(id,name,academyname,subjectname)
+		<!-- 获取上面的字段 -->
+		values(#{id,jdbcType=INTEGER},#{name,jdbcType=VARCHAR},#{academyName,jdbcType=VARCHAR},#{subjectName,jdbcType=VARCHAR})
+	</insert>
+	
+	<delete id="delChapter">
+		delete from chapter_tab where id = #{id}
+	</delete>
+	
+	<delete id="delChapters" parameterType="Long">
+		delete from chapter_tab where id in 
+		 <foreach item="id" collection="list" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+	</delete>
+	
+	<update id="updateChapter" parameterType="Chapter">
+		update chapter_tab set name = #{name} where id = #{id}
+	</update>
+	
+
+</mapper>

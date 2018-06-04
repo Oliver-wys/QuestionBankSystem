@@ -1,0 +1,128 @@
+*{
+    margin:0px;
+    padding:0px;
+    border: none;
+}
+div{
+    display: block;
+}
+
+#container{
+    background-color: gold;
+    width: 1364px;
+    height: 699px;
+
+}
+#head{
+    background-color: #769FCD;
+    height: 80px;
+}
+#head-img{
+    width: 180px;
+    height: 80px;
+    background: #769FCD url("../img/square.png") 10px -32px no-repeat;
+    background-size: 150px 150px;
+    float: left;
+    margin: 0px 0px 0px 80px;
+}
+
+#head-text{
+    margin: 0px 0px;
+    width: 1104px;
+    height: 80px;
+    background-color: #769FCD;
+    float: right;
+    font-family: "LiSu";
+    font-size: 33px;
+    color: white;
+    line-height: 80px;
+
+}
+
+
+
+#center{
+    background-color: white;
+    width: 1364px;
+    height: 579px;
+    float: right;
+    right: 0px;
+
+}
+
+#center-box{
+    background-color: white;
+    margin: 80px 0px 0px 210px;
+    width: 980px;
+    height: 416px;
+
+}
+#box-left{
+    background-color: white;
+    height: 400px;
+    width: 590px;
+    position: relative;
+    top: 8px;
+    left: 8px;
+    background:white url("../img/city.png");
+    background-size: 520px 400px;
+}
+#box-right{
+    background-color: white;
+    width: 334px;
+    height: 374px;
+    position: relative;
+    float: right;
+    bottom: 379px;
+    right: 21px;
+    border: 1px solid #A0B1C4;
+    box-shadow:0px 0px 3px 2px whitesmoke;
+    border-radius: 5px;
+}
+
+#loading-text-box{
+    width: 100%;
+    height: 50px;
+    margin: 0px auto ;
+}
+.loading-text {
+    width: 100%;
+    height: 50px;
+    margin: 0px auto ;
+    font-size: 17px;
+    border-bottom: 1px solid #A0B1C4;
+    color: white;
+    border-radius: 5px 5px 0 0;
+    background-color: #B9D7EA;
+}
+
+.loading-text span{
+    position: relative;
+    text-align: center;
+    line-height: 50px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0px 0px 0px 35px;
+    letter-spacing: 1px;
+}
+
+#formbox{
+    width: 260px;
+    height: 350px;
+    margin: 40px auto 0px auto;
+}
+
+
+.btn-change{
+    width: 260px;
+    left:20px;
+    float: right;
+    letter-spacing: 15px;
+	margin-top: 20px; 
+}
+#bottom{
+    background-color: #769FCD;
+    height: 41px;
+    width: 1364px;
+    float: right;
+    padding: 0px auto;
+}

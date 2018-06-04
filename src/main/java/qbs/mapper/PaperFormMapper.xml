@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="qbs.mapper.PaperFormMapper">
+
+	<select id="findAll" resultType="PaperForm">
+		SELECT * FROM PAPERFORM_TAB
+	</select>
+	
+	<select id="findBySubject" resultType="PaperForm">
+		SELECT * FROM PAPERFORM_TAB WHERE SUBJECTNAME= #{subjectName}
+	</select>
+	
+	<delete id="delPaperForm">
+		delete from paperform_tab where id = #{id}
+	</delete>
+	
+	<delete id="delPaperForms" parameterType="Long">
+		delete from paperform_tab where id in 
+		 <foreach item="id" collection="list" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+	</delete>
+	
+	<update id="updatePaperForm" parameterType="PaperForm">
+		update completion_tab set chaptername = #{chapterName},singlenum = #{singleNum},singlescore = #{singleScore},multinum = #{multiNum},multiscore = #{multiScore},judgenum = #{judgeNum},judgescore = #{judgeScore},completionnum = #{completionNum},completionscore = #{completionScore},shortnum = #{shortNum},shortscore = #{shortScore},score = #{score},time = #{time},dif_coefficient = #{dif_coefficient},name = #{name}  where id = #{id}
+	</update>
+
+
+</mapper>

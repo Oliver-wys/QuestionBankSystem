@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="qbs.mapper.UserMapper">
+	<!-- <select id="findUser" resultType="User"> SELECT * FROM USER_TAB WHERE 
+		account = #{account} and password = #{password} </select> -->
+
+	<select id="findUserByAccount" resultType="User">
+		SELECT * FROM user_tab
+		WHERE ACCOUNT = #{account}
+	</select>
+
+	<select id="findAllUser" resultType="User">
+		SELECT * FROM user_tab WHERE id != 1
+		<!-- select u.id,u.account,u.name,u.gender,u.phonenum,a.name academyName 
+			from user_tab u,academy_tab a where u.academyname = a.id and u.id != 1; -->
+	</select>
+
+	<insert id="addUser" parameterType="User">
+
+		<!-- 获取序列 -->
+		<selectKey keyProperty="id" resultType="java.lang.Long"
+			order="BEFORE">
+			select user_seq.nextval from dual
+		</selectKey>
+
+																
+		insert into user_tab(ID,ACCOUNT,PASSWORD,NAME,ACADEMYNAME,ISMANAGER)
+		<!-- 获取上面的字段 -->
+		values(#{id,jdbcType=INTEGER},#{account,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR},#{name,jdbcType=VARCHAR},#{academyName,jdbcType=VARCHAR},#{isManager,jdbcType=INTEGER})
+	</insert>
+	
+	<delete id="delUser">
+		delete from user_tab where id = #{id}
+	</delete>
+	
+	<delete id="delUsers" parameterType="Long">
+		delete from user_tab where id in 
+		 <foreach item="id" collection="list" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+	</delete>
+	
+	<update id="updatePassword" parameterType="User">
+		update user_tab set password = #{password} where account = #{account}
+	</update>
+	
+	<select id="getPassword" resultType="String">
+		select password from user_tab where account = #{account}
+	</select>
+	
+	<update id="updateInf" parameterType="User">
+		update user_tab set name = #{name},gender = #{gender},phonenum = #{phoneNum} where id = #{id}
+	</update>
+
+	<!-- <select id="findPage" resultType="User"> select * from (select u.*,rownum 
+		rn from (select * from user_tab where id != 1 order by id)u where rownum 
+		&lt;=((#{offset}+1)*#{limit}) ) where rn>(#{offset}*#{limit}) </select> -->
+
+	<!-- <resultMap type="User" id="userResult"> <id property="id" column="id" 
+		/> <result property="account" column="account"/> <result property="name" 
+		column="name"/> </resultMap> -->
+
+	<!-- <resultMap type="User" id="userResult"> <id property="id" column="user_id" 
+		/> <result property="account" column="user_account" /> <result property="name" 
+		column="user_name" /> <result property="gender" column="user_gender" /> <result 
+		property="phonenum" column="user_phonenum" /> <result property="academyname" 
+		column="academy_name" /> <association property="academy_tab" resultMap="academyResult"></association> 
+		</resultMap> <resultMap type="Academy" id="academyResult"> <id property="id" 
+		column="academy_id" /> <result property="name" column="academy_name" /> </resultMap> -->
+
+
+</mapper>
